@@ -241,6 +241,20 @@
     display: block;
     color: inherit;
     padding: 0 0.5em 0.5em;
+    transition-duration: 0.3s;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background-color: $c-light;
+      transform: scaleX(0);
+      transition-duration: 0.3s;
+      transform-origin: center left;
+    }
 
     &::after {
       content: "";
@@ -251,6 +265,7 @@
       background-color: $c-light;
       display: none;
       left: 0;
+      transition-duration: 0.3s;
 
       @media (max-width: $tablet) and (orientation: portrait) {
         left: 0;
@@ -278,6 +293,12 @@
 
       &::after {
         opacity: 1;
+        background-color: $c-purple;
+      }
+
+      &::before {
+        transform: scaleX(1);
+        transform-origin: center right;
         background-color: $c-purple;
       }
     }

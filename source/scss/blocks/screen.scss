@@ -10,6 +10,48 @@
     display: none;
   }
 
+  &--intro {
+    .intro__message {
+      animation-duration: 1s;
+      animation-name: FadeIn;
+    }
+
+    @keyframes FadeIn {
+      from {
+        transform: translateY(20px);
+        opacity: 0;
+        visibility: hidden;
+      }
+    
+      to {
+        transform: translateY(0px);
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+
+  &--game {
+    .form__field {
+      animation-duration: 1s;
+      animation-name: FadeIn;
+    }
+
+    @keyframes FadeIn {
+      from {
+        transform: translateX(150px);
+        opacity: 0;
+        visibility: hidden;
+      }
+    
+      to {
+        transform: translateX(0px);
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+
   @media (max-width: $tablet) and (orientation: portrait) {
     min-height: calc(var(--vh, 1vh) * 100);
   }

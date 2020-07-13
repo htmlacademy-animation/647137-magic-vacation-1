@@ -19,6 +19,42 @@
   padding: 14.6rem 4rem 10rem 9.7rem;
   height: auto;
 
+  &.swiper-slide-active, &.swiper-slide-next {
+    .slider__item-text {
+      animation-duration: 1.5s;
+      animation-name: FadeRight;
+      animation-fill-mode: forwards;
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+
+  &.swiper-slide-active {
+    .slider__item-text {
+      animation-delay: 0.3s;
+    }
+  }
+
+  &.swiper-slide-next {
+    .slider__item-text {
+      animation-delay: 0.6s;
+    }
+  }
+
+  @keyframes FadeRight {
+    from {
+      transform: translateX(20px);
+      opacity: 0;
+      visibility: hidden;
+    }
+  
+    to {
+      transform: translateX(0px);
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
   @media (min-width: $stop-scaling) {
     padding: 146px 40px 100px 97px;
   }
