@@ -977,6 +977,32 @@ img {
   clip: rect(0 0 0 0);
   overflow: hidden; }
 
+@keyframes FadeIn {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+    visibility: hidden; }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+    visibility: visible; } }
+
+@keyframes FadeInput {
+  from {
+    width: 150px; }
+  to {
+    width: calc(100% - 21rem); } }
+
+@keyframes FadeRight {
+  from {
+    transform: translateX(20px);
+    opacity: 0;
+    visibility: hidden; }
+  to {
+    transform: translateX(0px);
+    opacity: 1;
+    visibility: visible; } }
+
 .animation-screen {
   position: fixed;
   display: flex;
@@ -1862,14 +1888,12 @@ img {
     .page-header__menu a::before {
       content: "";
       position: absolute;
+      width: 0;
       bottom: 0;
-      left: 0;
       right: 0;
       height: 2px;
       background-color: #ffffff;
-      transform: scaleX(0);
-      transition-duration: 0.3s;
-      transform-origin: center left; }
+      transition: width 0.3s ease, background-color 0.3s ease; }
     .page-header__menu a::after {
       content: "";
       position: absolute;
@@ -1899,8 +1923,9 @@ img {
         opacity: 1;
         background-color: #a67ee5; }
       .page-header__menu a:hover::before, .page-header__menu a:focus::before {
-        transform: scaleX(1);
-        transform-origin: center right;
+        width: 100%;
+        right: auto;
+        left: 0;
         background-color: #a67ee5; }
 
 .page-header__social {
@@ -2588,29 +2613,12 @@ img {
   .screen--intro .intro__message {
     animation-duration: 1s;
     animation-name: FadeIn; }
-
-@keyframes FadeIn {
-  from {
-    transform: translateY(20px);
-    opacity: 0;
-    visibility: hidden; }
-  to {
-    transform: translateY(0px);
-    opacity: 1;
-    visibility: visible; } }
   .screen--game .form__field {
-    animation-duration: 1s;
-    animation-name: FadeIn; }
-
-@keyframes FadeIn {
-  from {
-    transform: translateX(150px);
-    opacity: 0;
-    visibility: hidden; }
-  to {
-    transform: translateX(0px);
-    opacity: 1;
-    visibility: visible; } }
+    animation-duration: 1.5s;
+    animation-name: FadeInput;
+    margin-left: auto; }
+  .screen--game .form__button {
+    max-width: 240px; }
   @media (max-width: 1024px) and (orientation: portrait) {
     .screen {
       min-height: calc(var(--vh, 1vh) * 100); } }
@@ -2943,16 +2951,6 @@ img {
     animation-delay: 0.3s; }
   .slider__item.swiper-slide-next .slider__item-text {
     animation-delay: 0.6s; }
-
-@keyframes FadeRight {
-  from {
-    transform: translateX(20px);
-    opacity: 0;
-    visibility: hidden; }
-  to {
-    transform: translateX(0px);
-    opacity: 1;
-    visibility: visible; } }
   @media (min-width: 2000px) {
     .slider__item {
       padding: 146px 40px 100px 97px; } }
