@@ -15,40 +15,17 @@
       animation-duration: 1s;
       animation-name: FadeIn;
     }
-
-    @keyframes FadeIn {
-      from {
-        transform: translateY(20px);
-        opacity: 0;
-        visibility: hidden;
-      }
-    
-      to {
-        transform: translateY(0px);
-        opacity: 1;
-        visibility: visible;
-      }
-    }
   }
 
   &--game {
     .form__field {
-      animation-duration: 1s;
-      animation-name: FadeIn;
+      animation-duration: 1.5s;
+      animation-name: FadeInput;
+      margin-left: auto;
     }
 
-    @keyframes FadeIn {
-      from {
-        transform: translateX(150px);
-        opacity: 0;
-        visibility: hidden;
-      }
-    
-      to {
-        transform: translateX(0px);
-        opacity: 1;
-        visibility: visible;
-      }
+    .form__button {
+      max-width: 240px;
     }
   }
 

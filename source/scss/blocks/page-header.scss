@@ -246,14 +246,12 @@
     &::before {
       content: "";
       position: absolute;
+      width: 0;
       bottom: 0;
-      left: 0;
       right: 0;
       height: 2px;
       background-color: $c-light;
-      transform: scaleX(0);
-      transition-duration: 0.3s;
-      transform-origin: center left;
+      transition: width 0.3s ease, background-color 0.3s ease;
     }
 
     &::after {
@@ -297,8 +295,9 @@
       }
 
       &::before {
-        transform: scaleX(1);
-        transform-origin: center right;
+        width: 100%;
+        right: auto;
+        left: 0;
         background-color: $c-purple;
       }
     }
