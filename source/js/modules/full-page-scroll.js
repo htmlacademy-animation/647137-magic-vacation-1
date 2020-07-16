@@ -65,6 +65,8 @@ export default class FullPageScroll {
       }
     });
 
+    
+
     document.body.dispatchEvent(event);
   }
 
