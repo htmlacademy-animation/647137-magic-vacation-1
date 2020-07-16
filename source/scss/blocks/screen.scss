@@ -48,7 +48,7 @@
   z-index: 1;
   opacity: 0;
   visibility: hidden;
-  transform: translateY(50px);
+  transform: translateY(5rem);
   transition: transform 1s cubic-bezier(.23,.45,.23,.99), opacity 1s cubic-bezier(.23,.45,.23,.99);
 
   .loaded & {

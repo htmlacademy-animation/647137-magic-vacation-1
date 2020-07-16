@@ -37,7 +37,7 @@
   color: $c-light;
   opacity: 0;
   visibility: hidden;
-  transform: translateX(-50px);
+  transform: translateX(-4rem);
   transition: transform 1s cubic-bezier(.23,.45,.23,.99), opacity 1s cubic-bezier(.23,.45,.23,.99);
 
   .loaded & {
@@ -142,7 +142,7 @@
   align-items: center;
   opacity: 0;
   visibility: hidden;
-  transform: translateX(50px);
+  transform: translateX(4rem);
   transition: transform 1s cubic-bezier(.23,.45,.23,.99), opacity 1s cubic-bezier(.23,.45,.23,.99);
 
   .loaded & {
