@@ -1691,7 +1691,7 @@ img {
   color: #ffffff;
   opacity: 0;
   visibility: hidden;
-  transform: translateX(-50px);
+  transform: translateX(-4rem);
   transition: transform 1s cubic-bezier(0.23, 0.45, 0.23, 0.99), opacity 1s cubic-bezier(0.23, 0.45, 0.23, 0.99); }
   .page-header__logo:hover {
     opacity: 0.8; }
@@ -1779,7 +1779,7 @@ img {
   align-items: center;
   opacity: 0;
   visibility: hidden;
-  transform: translateX(50px);
+  transform: translateX(4rem);
   transition: transform 1s cubic-bezier(0.23, 0.45, 0.23, 0.99), opacity 1s cubic-bezier(0.23, 0.45, 0.23, 0.99); }
   .loaded .page-header__nav {
     transform: translateX(0);
@@ -2629,7 +2629,7 @@ img {
   z-index: 1;
   opacity: 0;
   visibility: hidden;
-  transform: translateY(50px);
+  transform: translateY(5rem);
   transition: transform 1s cubic-bezier(0.23, 0.45, 0.23, 0.99), opacity 1s cubic-bezier(0.23, 0.45, 0.23, 0.99); }
   .loaded .screen__footer {
     transform: translateX(0);
