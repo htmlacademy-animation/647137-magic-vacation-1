@@ -10,6 +10,25 @@
     display: none;
   }
 
+  &--intro {
+    .intro__message {
+      animation-duration: 1s;
+      animation-name: FadeIn;
+    }
+  }
+
+  &--game {
+    .form__field {
+      animation-duration: 1.5s;
+      animation-name: FadeInput;
+      margin-left: auto;
+    }
+
+    .form__button {
+      max-width: 240px;
+    }
+  }
+
   @media (max-width: $tablet) and (orientation: portrait) {
     min-height: calc(var(--vh, 1vh) * 100);
   }

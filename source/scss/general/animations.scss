@@ -1,0 +1,37 @@
+@keyframes FadeIn {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    to {
+        transform: translateY(0px);
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+@keyframes FadeInput {
+    from {
+        width: 150px;
+    }
+
+    to {
+        width: calc(100% - 21rem);
+    }
+}
+
+@keyframes FadeRight {
+    from {
+      transform: translateX(20px);
+      opacity: 0;
+      visibility: hidden;
+    }
+  
+    to {
+      transform: translateX(0px);
+      opacity: 1;
+      visibility: visible;
+    }
+}
