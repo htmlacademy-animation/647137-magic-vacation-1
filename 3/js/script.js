@@ -10342,6 +10342,8 @@ class FullPageScroll {
       }
     });
 
+    
+
     document.body.dispatchEvent(event);
   }
 
