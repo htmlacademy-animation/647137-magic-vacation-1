@@ -10,6 +10,9 @@ export default class FullPageScroll {
     this.activeScreen = 0;
     this.onScrollHandler = this.onScroll.bind(this);
     this.onUrlHashChengedHandler = this.onUrlHashChanged.bind(this);
+
+    this.backgroundAnimationScreenPositions = [{from: 1, to: 2}]
+    this.backgroundAnimationElement = document.getElementById('background')
   }
 
   init() {
@@ -21,6 +24,7 @@ export default class FullPageScroll {
 
   onScroll(evt) {
     const currentPosition = this.activeScreen;
+    this.prevActiveScreen = this.activeScreen
     this.reCalculateActiveScreenPosition(evt.deltaY);
     if (currentPosition !== this.activeScreen) {
       this.changePageDisplay();
@@ -29,14 +33,31 @@ export default class FullPageScroll {
 
   onUrlHashChanged() {
     const newIndex = Array.from(this.screenElements).findIndex((screen) => location.hash.slice(1) === screen.id);
+    this.prevActiveScreen = this.activeScreen
     this.activeScreen = (newIndex < 0) ? 0 : newIndex;
     this.changePageDisplay();
   }
 
   changePageDisplay() {
-    this.changeVisibilityDisplay();
-    this.changeActiveMenuItem();
-    this.emitChangeDisplayEvent();
+    let mainFunction = () => {
+      this.changeVisibilityDisplay();
+      this.changeActiveMenuItem();
+      this.emitChangeDisplayEvent();
+    }
+
+    let isBackgroundAnimation = this.backgroundAnimationScreenPositions.some(el => el.from === this.prevActiveScreen && el.to === this.activeScreen)
+
+    if (isBackgroundAnimation) {
+      this.backgroundAnimationElement.addEventListener("transitionend", () => {
+        if (this.backgroundAnimationElement.classList.contains('active')) {
+          mainFunction()
+          this.backgroundAnimationElement.classList.remove('active')
+        }
+      });
+      this.backgroundAnimationElement.classList.add('active')
+    } else {
+      mainFunction()
+    }
   }
 
   changeVisibilityDisplay() {

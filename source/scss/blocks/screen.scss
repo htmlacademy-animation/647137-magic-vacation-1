@@ -49,6 +49,22 @@
   z-index: 1;
 }
 
+#background {
+  position: absolute;
+  z-index: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 0;
+  background-color: $c-dark;
+  transition: height 0.5s ease-in;
+
+  &.active{
+    height: 100%;
+    z-index: 1;
+  }
+}
+
 .screen__disclaimer {
   position: absolute;
   bottom: 0;
