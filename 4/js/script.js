@@ -10480,6 +10480,10 @@ __webpack_require__.r(__webpack_exports__);
     lastAnimatedBlock.addEventListener('animationend', () => {
         goButton.classList.add('ready')
     })
+
+    document.body.addEventListener('screenChanged', () => {
+        goButton.classList.remove('ready')
+    })
 });
 
 /***/ }),
