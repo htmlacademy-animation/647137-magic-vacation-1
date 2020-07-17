@@ -49,17 +49,3 @@
         transform: scale(1);
     }
 }
-
-@keyframes GoBtn {
-    from {
-      width: 3.5rem;
-      opacity: 0;
-      visibility: hidden;
-    }
-  
-    to {
-      width: auto;
-      opacity: 1;
-      visibility: visible;
-    }
-}

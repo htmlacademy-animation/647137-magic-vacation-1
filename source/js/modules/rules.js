@@ -5,4 +5,8 @@ export default () => {
     lastAnimatedBlock.addEventListener('animationend', () => {
         goButton.classList.add('ready')
     })
+
+    document.body.addEventListener('screenChanged', () => {
+        goButton.classList.remove('ready')
+    })
 }
