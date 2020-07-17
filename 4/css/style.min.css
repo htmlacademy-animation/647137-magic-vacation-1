@@ -1011,6 +1011,16 @@ img {
   100% {
     transform: scale(1); } }
 
+@keyframes GoBtn {
+  from {
+    width: 3.5rem;
+    opacity: 0;
+    visibility: hidden; }
+  to {
+    width: auto;
+    opacity: 1;
+    visibility: visible; } }
+
 .animation-screen {
   position: fixed;
   display: flex;
@@ -2635,13 +2645,11 @@ img {
   right: 5.6rem;
   width: 3.5rem;
   opacity: 0;
-  visibility: hidden;
-  transition-duration: 0.5s;
-  transition-property: width; }
+  visibility: hidden; }
   .rules__link.ready {
-    width: 155px;
-    opacity: 1;
-    visibility: visible; }
+    animation-name: GoBtn;
+    animation-fill-mode: forwards;
+    animation-duration: 0.6s; }
   @media (min-width: 2000px) {
     .rules__link {
       bottom: 60px;
