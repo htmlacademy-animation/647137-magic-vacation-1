@@ -11,9 +11,17 @@
   }
 
   &--intro {
-    .intro__message {
+    .intro__message, .intro__label {
       animation-duration: 1s;
       animation-name: FadeIn;
+      animation-delay: 1.2s;
+      opacity: 0;
+      visibility: hidden;
+      animation-fill-mode: forwards;
+    }
+
+    .intro__label {
+      animation-delay: 1.8s;
     }
   }
 
