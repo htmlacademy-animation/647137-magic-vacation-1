@@ -177,6 +177,23 @@
   width: 4rem;
   height: 4rem;
   color: $c-dark;
+  
+  &--prev, &--next {
+    animation-duration: 0.9s;
+    animation-direction: normal;
+    animation-delay: 0;
+    animation-fill-mode: forwards;  
+    animation-play-state: running;  
+    animation-timing-function: cubic-bezier(.03,.72,.64,1.33);
+  }
+
+  &--prev {
+    animation-name: PrevBtnIn;
+  }
+
+  &--next {
+    animation-name: NextBtnIn;
+  }
 
   @media (min-width: $stop-scaling) {
     width: 40px;
