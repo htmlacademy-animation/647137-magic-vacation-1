@@ -49,3 +49,25 @@
         transform: scale(1);
     }
 }
+
+@keyframes PrevBtnIn {
+    from {
+        transform: translateX(-100px) rotateZ(-180deg);
+        opacity: 0;
+    }
+    
+    to {
+        transform: translateX(0px) rotateZ(0);
+    }
+} 
+
+@keyframes NextBtnIn {
+    from {
+        transform: translateX(100px) rotateZ(180deg);
+        opacity: 0;
+    }
+    
+    to {
+        transform: translateX(0px) rotateZ(0);
+    }
+} 
